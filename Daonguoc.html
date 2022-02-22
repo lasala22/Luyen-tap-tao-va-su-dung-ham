@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+</body>
+</html>
+<script>
+    let kytu = prompt("Nhập vào một mảng bất kì: ");
+    let arr = kytu.split("");
+    let daonguoc = daoNguoc(arr);
+    console.log(daonguoc);
+    function daoNguoc(arr) {
+        let first = 0;
+        let last = arr.length - 1;
+        let b;
+        for(first;first<last;first++,last--) {
+            b = arr[first];
+            arr[first] = arr[last];
+            arr[last] = b;
+        }
+        return arr;
+    }
+    document.write(daonguoc);
+</script>
